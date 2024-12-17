@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vandongungoc</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            color: #333;
+        }
+
+        .tab-container {
+            width: 80%;
+            margin: 50px auto;
+            background: #fff;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .tabs {
+            display: flex;
+            border-bottom: 2px solid #ddd;
+            background-color: #f5f5f5;
+        }
+
+        .tab {
+            flex: 1;
+            text-align: center;
+            padding: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .tab:hover {
+            background: #4facfe;
+            color: #fff;
+        }
+
+        .tab.active {
+            background: #4facfe;
+            color: #fff;
+            border-bottom: 3px solid #00c6ff;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px;
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        img {
+            height: 300px;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+            transition: transform 0.4s ease;
+        }
+
+        video {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        a {
+            text-decoration: none;
+            color: #4facfe;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        audio {
+            display: inline;
+            margin: 2px auto;
+        }
+    </style>
+</head>
+<body>
+    <em>
+
+<div class="tab-container">
+    <div class="tabs">
+        <div class="tab active" onclick="openTab(event, 'tab1')">Thông Tin Cá Nhân</div>
+        <div class="tab" onclick="openTab(event, 'tab2')">Video Nhạc Yêu Thích</div>
+        <div class="tab" onclick="openTab(event, 'tab3')">Thông Điệp Kỉ Niệm Của Lớp</div>
+    </div>
+
+
+    <div id="tab1" class="tab-content active">
+        <h2>Thông Tin Cá Nhân</h2>
+        <p><strong>Họ Và Tên:</strong> <span style="color:darkgreen;">Mai Văn Đô</span></p>
+        <p><strong>Sinh Năm:</strong> <span style="color:blueviolet;">2007</span></p>
+        <p><strong>Nơi Ở:</strong> <a href="https://daklak.gov.vn/">Daklak</a></p>
+        <p><strong>Sở Thích:</strong>
+            <ul>
+                <li>Ngắm hoàng hôn</li>
+                <li>Nghe nhạc</li>
+                <li>Đánh cầu lông</li>
+                <li>Đánh bóng chuyền</li>
+            </ul>
+        </p>
+        <p><strong>Bài Hát Hay Nghe:</strong></p>
+        <audio src="loveis.mp3" controls></audio>
+        <div>
+            <img src="cuem.png" alt="Bạn kien">
+            <img src="khanhden.png" alt="Bạn khanh">
+            <img src="tyty.png" alt="Bạn ty">
+        </div>
+        <h3> ngôi trường đang theo học </h3>
+        <img src="thptyjut.png" >
+        <h4> dưới đây là video giới thiệu về trường học </h4>
+        <video src="ttp.mp4" width="835" height="835" controls></video>
+    </div>
+    <div id="tab2" class="tab-content">
+        <h2>Video Nhạc Yêu Thích</h2>
+        <video src="bop.mp4.mp4" width="835" height="835" controls></video>
+        <iframe width="853" height="480" src="https://www.youtube.com/embed/lRsaDQtYqAo" title="Dương Domic - Mất Kết Nối | EP &#39;Dữ Liệu Quý&#39;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+<div id="tab3" class="tab-content">
+    <h2>Kỉ Niệm Của Lớp</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 25px; justify-content: center;">
+       
+        <div>
+            <img src="phunu.jpg" alt="Ngày Quốc Tế Phụ Nữ" style="width: 400px; height: auto; border-radius: 10px; box-shadow: 0 6px 12px rgba(0,0,0,0.1);">
+            <p style="text-align: center; font-size: 1.2rem; margin-top: 10px;">Ngày Quốc Tế Phụ Nữ</p>
+        </div>
+        
+        <div>
+            <img src="contrai.jpg" alt="Ngày Quốc Tế Con Trai" style="width: 300px; height: auto; border-radius: 10px; box-shadow: 0 6px 12px rgba(0,0,0,0.1);">
+            <p style="text-align: center; font-size: 1.2rem; margin-top: 10px;">Ngày Quốc Tế Con Trai</p>
+        </div>
+       
+        <div>
+            <img src="keoco.jpg" alt="Cuộc Thi Kéo Co" style="width: 400px; height: auto; border-radius: 10px; box-shadow: 0 6px 12px rgba(0,0,0,0.1);">
+            <p style="text-align: center; font-size: 1.2rem; margin-top: 10px;">Cuộc Thi Kéo Co</p>
+        </div>
+      
+        <div>
+            <img src="hoang.jpg" alt="Đi Chơi Với Thầy" style="width: 400px; height: auto; border-radius: 10px; box-shadow: 0 6px 12px rgba(0,0,0,0.1);">
+            <p style="text-align: center; font-size: 1.2rem; margin-top: 10px;">Đi Chơi Với Thầy Thực Tập</p>
+        </div>
+        <div>
+            <img src="gdth.jpg" alt="giai dieu tuoi hong" style="width: 300px; height: auto; border-radius: 10px; box-shadow: 0 6px 12px rgba(0,0,0,0.1);">
+            <p style="text-align: center; font-size: 1.2rem; margin-top: 10px;">giai điệu tuổi hồng của lớp</p>
+            
+        </div>
+        <div>
+              <img src="sinhnhatco.jpg" alt="sinh nhat co" style="width: 300px; height: auto; border-radius: 10px; box-shadow: 0 6px 12px rgba(0,0,0,0.1);">
+            <p style="text-align: center; font-size: 1.2rem; margin-top: 10px;">sinh nhật cô 2024</p>
+            
+            
+        </div>
+        <div>
+            <img src="camhoa.png" alt="cam hoa" style="width: 300px; height: auto; border-radius: 10px; box-shadow: 0 6px 12px rgba(0,0,0,0.1);">
+            <p style="text-align: center; font-size: 1.2rem; margin-top: 10px;">các bạn cắm hoa</p>
+            
+        </div>
+        <div>
+            <img src="caythongcacbanlam.png" alt="caythong" style="width: 300px; height: auto; border-radius: 10px; box-shadow: 0 6px 12px rgba(0,0,0,0.1);">
+            <p style="text-align: center; font-size: 1.2rem; margin-top: 10px;">cây thông tự tay các bạn làm</p>
+            
+            
+        </div>
+    </div>
+</div>
+
+<script>
+    function openTab(event, tabId) {
+        
+        const contents = document.querySelectorAll('.tab-content');
+        contents.forEach(content => content.classList.remove('active'));
+
+     
+        const tabs = document.querySelectorAll('.tab');
+        tabs.forEach(tab => tab.classList.remove('active'));
+
+        
+        document.getElementById(tabId).classList.add('active');
+
+    
+        event.currentTarget.classList.add('active');
+    }
+</script>
+</em>
+
+</body>
+</html>
